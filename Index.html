@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi trading</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>Mi trading</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+      <section class="balance">
+        <div>
+          <p>Title</p>
+          <h2>$46,678.90</h2>
+          <p>+20% month over month</p>
+        </div>
+      </section>
+      <section class="balance">
+        <div>
+          <p>Title</p>
+          <h2>2,405</h2>
+          <p>+20% month over month</p>
+        </div>
+      </section>
+      <section class="balance">
+        <div>
+          <p>Title</p>
+          <h2>10,530</h2>
+          <p>+20% month over month</p>
+        </div>
+      </section>
+        <section class="form-section">
+            <form id="transactionForm" class="form" name="transactionForm">
+              <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input id="fecha" name="date" type="text" placeholder="Ingrese la fecha (Ej: 4)">
+              </div>
+              <div class="form-group">
+                <label for="monthyear">Mes-Año</label>
+                <input id="monthyear" name="monthyear" type="text" placeholder="Ingrese mes-año (Ej: 62024)">
+              </div>
+              <div class="form-group">
+                <label for="comment">Comentario</label>
+                <input id="comment" name="comment" type="text" placeholder="Ingrese la Comentario">
+              </div>
+              <div class="form-group">
+                <label for="ticket">Ticket</label>
+                <input id="ticket" name="ticket" type="text" placeholder="Ingrese el ticket (Ej: USDEUR)">
+              </div>
+              <div class="form-group radio-group">
+                <label>Transacción</label>
+                <div class="radio-options">
+                  <label>
+                    Buy<input type="radio" name="stransaction" value="Buy">
+                </label>
+                  <label>
+                    Sell
+                    <input type="radio" name="stransaction" value="Sell">
+                </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="result">Resultado ind/opt</label>
+                <input id="result" name="result" type="text" placeholder="Ingrese el resultado en procentaje (Ej: 2%)">
+              </div>
+              <div class="form-group">
+                <label for="equity">Equity-U$D</label>
+                <input id="equity" name="equity" type="text" placeholder="Ingrese el equity (Ej: $1000)">
+              </div>
+                <div>
+                    <button class="save-button">Guardar</button>
+                </div>
+            </div>
+        </section>
+        <section class="tabla">
+                <table id="transactiontable">
+                    <tr>
+                      <th>Comentario</th>
+                      <th>Fecha</th>
+                      <th>Mes-Año</th>
+                      <th>Ticket</th>
+                      <th>Transacción</th>
+                      <th>Resultado ind/opt</th>
+                      <th>Equity-U$D</th>
+                      <th class="Eliminar">Eliminar</th>
+                    </tr>
+                </table>
+        </section>
+        <section  class="tablaTradesEjc">
+          <table class="tradesEjc">
+                <tr>
+                    <th>Activo</th>
+                    <th>Trades Ejecutados (Nº)</th>
+                    <th>Tasa de Acierto</th>
+                    <th>P/L acumulado</th>
+                    <th>Ganancia x op Trade</th>
+                </tr>
+            <tbody>
+        </section>
+    </main> 
+    <script src="js/app.js"></script>
+</body>
+</html>
