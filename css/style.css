@@ -32,7 +32,98 @@ border: solid #ffffff 1px;
 background-color: #ff0000d8;
   color: white; */
 
-  body{
-    margin: 0;
-    padding: 0;
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+  
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: rgb(44, 62, 80);
+  background: linear-gradient(145deg, rgba(44, 62, 80, 1) 14%, rgba(3, 4, 5, 1) 85%);
   }
+
+.layout{
+  display: grid;
+  gap: 4px;
+  grid-template-rows: 40px 40px auto 60px 60px 40px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  'header' 'sidebar' 'main' 'widget' 'statistics' 'footer';
+  height: 100vh;
+}
+@media (min-width: 769px){
+  .layout{
+    display: grid;
+    grid-template-rows: 40px auto 80px 40px;
+    grid-template-columns: 160px auto auto;
+    grid-template-areas: 
+    'header header header' 
+    'sidebar main main' 
+    'siderbar widget statistics'
+    'footer footer footer';
+  }
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  background: #c08bfd;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+footer{
+  grid-area: footer;
+  background: #c08bfd;
+}
+nav{
+  grid-area: sidebar;
+  background: #f6c356;
+  margin: 10px;
+}
+main{
+  grid-area: main;
+  background: #b2ee94;
+  font-size: 20px;
+  margin: 10px;
+}
+.widget{
+  grid-area: widget;
+  background-color: #ff8983;
+  width: 100%;
+}
+.statistics{
+  grid-area: statistics;
+  background-color: #99c2fe;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+

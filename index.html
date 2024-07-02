@@ -11,14 +11,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="layout">
     <header>
-        <nav>
-            <div>
-                <h1>Libro de trading</h1>
-            </div>
-        </nav>
+        <h1>Libro de trading</h1>
     </header>
-    <main>
+    <nav class="sidebar">
       <section class="balance">
         <div>
           <p>Ganancia</p>
@@ -40,57 +37,9 @@
           <p id="perdida"></p>
         </div>
       </section>
-      <section class="form-section">
-          <iframe id="coin360" src="https://coin360.com/widget/map?utm_source=embed_map" frameborder="0" title="Coin360.com: Cryptocurrency Market State" width="600" height="500"></iframe>
-          <input type="text" id="coin-input1" placeholder="Ingrese moneda base (ej. USD)" />
-          <input type="text" id="coin-input2" placeholder="Ingrese moneda de destino (ej. EUR)" />
-          <button id="check-price-button">Check Price</button>
-          <p id="price-display">El precio se mostrará aquí.</p>
-      </section>
-        <section class="form-section">
-            <form id="transactionForm" class="form" name="transactionForm">
-              <div class="form-group">
-                <label for="fecha">Fecha</label>
-                <input id="fecha" name="date" type="text" placeholder="Ingrese la fecha (Ej: 4)">
-              </div>
-              <div class="form-group">
-                <label for="monthyear">Mes-Año</label>
-                <input id="monthyear" name="monthyear" type="text" placeholder="Ingrese mes-año (Ej: 62024)">
-              </div>
-              <div class="form-group">
-                <label for="comment">Comentario</label>
-                <input id="comment" name="comment" type="text" placeholder="Ingrese la Comentario">
-              </div>
-              <div class="form-group">
-                <label for="ticket">Ticket</label>
-                <input id="ticket" name="ticket" type="text" placeholder="Ingrese el ticket (Ej: USDEUR)">
-              </div>
-              <div class="form-group radio-group">
-                <label>Transacción</label>
-                <div class="radio-options">
-                  <label>
-                    Buy<input type="radio" name="stransaction" value="Buy">
-                </label>
-                  <label>
-                    Sell
-                    <input type="radio" name="stransaction" value="Sell">
-                </label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="result">Resultado ind/opt</label>
-                <input id="result" name="result" type="text" placeholder="Ingrese el resultado en procentaje (Ej: 2%)">
-              </div>
-              <div class="form-group">
-                <label for="equity">Equity-U$D</label>
-                <input id="equity" name="equity" type="text" placeholder="Ingrese el equity (Ej: $1000)">
-              </div>
-                <div>
-                    <button class="save-button">Guardar</button>
-                </div>
-            </div>
-        </section>
-        <section class="tabla">
+    </nav>
+    <main>
+      <section class="tabla">
                 <table id="transactiontable">
                     <tr>
                       <th>Comentario</th>
@@ -103,9 +52,69 @@
                       <th class="Eliminar">Eliminar</th>
                     </tr>
                 </table>
-        </section>
+      </section>
+      <section class="form-section">
+        <form id="transactionForm" class="form" name="transactionForm">
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input id="fecha" name="date" type="text" placeholder="Ingrese la fecha (Ej: 4)">
+          </div>
+          <div class="form-group">
+            <label for="monthyear">Mes-Año</label>
+            <input id="monthyear" name="monthyear" type="text" placeholder="Ingrese mes-año (Ej: 62024)">
+          </div>
+          <div class="form-group">
+            <label for="comment">Comentario</label>
+            <input id="comment" name="comment" type="text" placeholder="Ingrese la Comentario">
+          </div>
+          <div class="form-group">
+            <label for="ticket">Ticket</label>
+            <input id="ticket" name="ticket" type="text" placeholder="Ingrese el ticket (Ej: USDEUR)">
+          </div>
+          <div class="form-group radio-group">
+            <label>Transacción</label>
+            <div class="radio-options">
+              <label>
+                Buy<input type="radio" name="stransaction" value="Buy">
+            </label>
+              <label>
+                Sell
+                <input type="radio" name="stransaction" value="Sell">
+            </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="result">Resultado ind/opt</label>
+            <input id="result" name="result" type="text" placeholder="Ingrese el resultado en procentaje (Ej: 2%)">
+          </div>
+          <div class="form-group">
+            <label for="equity">Equity-U$D</label>
+            <input id="equity" name="equity" type="text" placeholder="Ingrese el equity (Ej: $1000)">
+          </div>
+            <div>
+                <button class="save-button">Guardar</button>
+            </div>
+        </div>
+    </section>
     </main>
+    <article class="widget">
+      <input type="text" id="coin-input1" placeholder="Ingrese moneda base (ej. USD)" />
+      <input type="text" id="coin-input2" placeholder="Ingrese moneda de destino (ej. EUR)" />
+      <button id="check-price-button">Check Price</button>
+      <p id="price-display">El precio se mostrará aquí.</p>
+    </article>
+    <article class="statistics">
+      <section class="form-section">
+        <iframe id="coin360" src="https://coin360.com/widget/map?utm_source=embed_map" frameborder="0" title="Coin360.com: Cryptocurrency Market State" width="600" height="500"></iframe>
+      </section>
+    </article>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/app.js"></script>
+  <footer>
+    <div>
+     <h2>Libro</h2>
+    </div>
+  </footer>
 </body>
 </html>
