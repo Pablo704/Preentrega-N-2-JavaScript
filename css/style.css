@@ -149,6 +149,7 @@ td {
 }
 /* Botón en la celda de la tabla */
 td button {
+  font-size: 0.5rem;
   padding: 3px;
   background-color: #ff0000d8;
   color: white;
