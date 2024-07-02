@@ -1,67 +1,191 @@
-body{
-  margin: 0;
-  padding: 0;
-  }
-
-.layout{
+.layout {
   display: grid;
   gap: 4px;
   grid-template-rows: 40px 40px auto 60px 60px 40px;
   grid-template-columns: 1fr;
-  grid-template-areas: 
-  'header' 'sidebar' 'main' 'widget' 'statistics' 'footer';
+  grid-template-areas:
+    'header'
+    'sidebar'
+    'main'
+    'widget'
+    'statistics'
+    'footer';
   height: 100vh;
 }
-@media (min-width: 769px){
-  .layout{
-    display: grid;
+body {
+
+  background: rgb(44, 62, 80);
+  background: linear-gradient(145deg, rgba(44, 62, 80, 1) 14%, rgba(3, 4, 5, 1) 85%);
+}
+
+@media (min-width: 768px) {
+  .layout {
     grid-template-rows: 40px auto 80px 40px;
     grid-template-columns: 160px auto auto;
-    grid-template-areas: 
-    'header header header' 
-    'sidebar main main' 
-    'siderbar widget statistics'
-    'footer footer footer';
+    grid-template-areas:
+      'header header header'
+      'sidebar main main'
+      'sidebar widget statistics'
+      'footer footer footer';
   }
 }
-
-header{
-  grid-area: header;
-  background: #c08bfd;
+header {
+  display: none;
+  /*grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #29303A;
+  font-size: 16px;
+  color: white;
+  border-radius: 0 0 10px 10px;
+  max-width: 100%;*/
 }
-footer{
+footer {
+  display: none;
   grid-area: footer;
-  background: #c08bfd;
+  background-color:#29303A;
 }
-nav{
+.sidebar {
   grid-area: sidebar;
-  background: #f6c356;
   margin: 10px;
+  display: flex;
+  align-items: center;
 }
-main{
+.sidebar .balance {
+  width:90%;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  border: solid 2px #ffff;
+  background-color: #ffff;
+  border-radius: 20px;
+}
+
+main {
   grid-area: main;
-  background: #b2ee94;
-  font-size: 20px;
-  margin: 10px;
+  
 }
-.widget{
+/* Formulario */
+.form-section {
+  background-color: #29303a;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin-bottom: 40px; 
+}
+.form {
+  max-width: 100%;
+}
+/* Grupo de formulario */
+.form-group {
+  margin-bottom: 1rem;
+}
+/* Etiqueta de grupo de formulario */
+.form-group label {
+  color: white;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+/* Grupo de radio */
+.form-group.radio-group label {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.form-group.radio-group .radio-options {
+  display: inline-block;
+}
+.form-group.radio-group input[type="radio"] {
+  margin-right: 0.25rem;
+}
+/* Input, radio y botón */
+input[type="text"],
+input[type="radio"],
+button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.save-button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+.save-button:hover:hover {
+  background-color: #45a049;
+}
+button:focus,
+input:focus {
+  outline: none;
+}
+/* Tabla */
+tbody {
+  text-align: center;
+  padding: 1rem;
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto; 
+}
+/* Contenedor de la tabla */
+.tabla {
+  border-radius: 10px;
+  background-color: #29303a;
+  padding: 1rem;
+  max-width: 95%; 
+  margin-bottom: 40px;
+}
+/* Fila de la tabla */
+tr {
+  background-color: #ffff;
+}
+/* Celda de la tabla */
+th,
+td {
+  flex: 1 1 0%;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  border: solid #ffffff 1px;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  width: 95%;
+}
+/* Botón en la celda de la tabla */
+td button {
+  padding: 3px;
+  background-color: #ff0000d8;
+  color: white;
+  cursor: pointer;
+}
+td button:hover {
+  background-color: #ff0000;
+}
+.tablaTradesEjc {
+  border-radius: 10px;
+  background-color: #29303a;
+  padding: 4px;
+  max-width: 100%; 
+  margin: 0 auto; 
+  margin-bottom: 40px;
+}
+#price-display{
+  color: #ffff;
+}
+#coin360{
+  width: 100%;
+}
+.widget {
   grid-area: widget;
-  background-color: #ff8983;
-  width: 100%;
 }
-.statistics{
+
+.statistics {
   grid-area: statistics;
-  background-color: #99c2fe;
-  width: 100%;
 }
-
-
-
-
-
-
-
-
-
 
 
