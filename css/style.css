@@ -1,23 +1,8 @@
-.layout {
-  display: grid;
-  gap: 4px;
-  grid-template-rows: 40px 40px auto 60px 60px 40px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    'header'
-    'sidebar'
-    'main'
-    'widget'
-    'statistics'
-    'footer';
-  height: 100vh;
-}
-body {
 
+body {
   background: rgb(44, 62, 80);
   background: linear-gradient(145deg, rgba(44, 62, 80, 1) 14%, rgba(3, 4, 5, 1) 85%);
 }
-
 @media (min-width: 768px) {
   .layout {
     grid-template-rows: 40px auto 80px 40px;
@@ -28,10 +13,10 @@ body {
       'sidebar widget statistics'
       'footer footer footer';
   }
+  
 }
 header {
-  display: none;
-  /*grid-area: header;
+  grid-area: header;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,12 +24,18 @@ header {
   font-size: 16px;
   color: white;
   border-radius: 0 0 10px 10px;
-  max-width: 100%;*/
+  max-width: 100%;
 }
 footer {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: footer;
-  background-color:#29303A;
+  background-color: #29303A;
+  font-size: 16px;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
 }
 .sidebar {
   grid-area: sidebar;
@@ -135,8 +126,9 @@ tbody {
   border-radius: 10px;
   background-color: #29303a;
   padding: 1rem;
-  max-width: 95%; 
+  max-width: 95%; /* Máximo ancho del contenedor */
   margin-bottom: 40px;
+  overflow-x: auto; /* Scroll horizontal si el contenido es demasiado ancho */
 }
 /* Fila de la tabla */
 tr {
@@ -145,16 +137,14 @@ tr {
 /* Celda de la tabla */
 th,
 td {
-  flex: 1 1 0%;
-  height: 1.5rem;
+  height: 1.5rem; /* Altura fija */
   border-radius: 0.25rem;
   border: solid #ffffff 1px;
   background-color: #ffffff;
-  padding: 0.5rem;
-  font-size: 0.9rem;
+  padding: 0.3rem;
+  font-size: 0.7rem;
   outline: none;
   transition: box-shadow 0.3s, border-color 0.3s;
-  width: 95%;
 }
 /* Botón en la celda de la tabla */
 td button {
