@@ -1,58 +1,3 @@
-/* Estilos generales */
-/* background: rgb(44, 62, 80);
-  background: linear-gradient(145deg, rgba(44, 62, 80, 1) 14%, rgba(3, 4, 5, 1) 85%);*/
-
-/* Header */
-/*  background-color: #29303A;
-  color: white;*/
-
-/* Formulario 
-  background-color: #29303a; */
-
-/* Input, radio y botón   border: 1px solid #ccc;*/
-
-/*buttom background-color: #4caf50;
-color: white;*/
-
-/*save-button:hover:hover
-background-color: #45a049;*/
-
-/* Contenedor de la tabla
- background-color: #29303a; */
-
-/* Fila de la tabla 
-background-color: #ffff;
- */
-
-/* Celda de la tabla
-border: solid #ffffff 1px;
-  background-color: #ffffff; */
-
-/* Botón en la celda de la tabla 
-background-color: #ff0000d8;
-  color: white; */
-
-.roboto-black-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-.roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-.roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-  
-.roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
 body{
   margin: 0;
   padding: 0;
@@ -82,14 +27,8 @@ body{
   }
 }
 header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   grid-area: header;
   background: #c08bfd;
-  font-size: 20px;
-  color: white;
-  border-radius: 0 0 10px 10px;
 }
 footer{
   grid-area: footer;
