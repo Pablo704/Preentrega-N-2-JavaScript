@@ -51,6 +51,7 @@ footer {
   border: solid 2px #ffff;
   background-color: #ffff;
   border-radius: 20px;
+  font-size: 10px;
 }
 
 main {
@@ -99,7 +100,7 @@ button {
   border-radius: 0.25rem;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 10px;
 }
 .save-button {
   background-color: #4caf50;
@@ -141,8 +142,8 @@ td {
   border-radius: 0.25rem;
   border: solid #ffffff 1px;
   background-color: #ffffff;
-  padding: 0.3rem;
-  font-size: 0.7rem;
+  padding: 0.1rem;
+  font-size: 0.4rem;
   outline: none;
   transition: box-shadow 0.3s, border-color 0.3s;
 }
