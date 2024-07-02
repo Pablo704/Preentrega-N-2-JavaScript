@@ -1,8 +1,6 @@
 body{
   margin: 0;
   padding: 0;
-  background: rgb(44, 62, 80);
-  background: linear-gradient(145deg, rgba(44, 62, 80, 1) 14%, rgba(3, 4, 5, 1) 85%);
   }
 
 .layout{
@@ -26,6 +24,7 @@ body{
     'footer footer footer';
   }
 }
+
 header{
   grid-area: header;
   background: #c08bfd;
