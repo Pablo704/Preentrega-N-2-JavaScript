@@ -3,7 +3,7 @@ body {
   background: rgb(44, 62, 80);
   background: linear-gradient(145deg, rgba(44, 62, 80, 1) 14%, rgba(3, 4, 5, 1) 85%);
 }
-@media (min-width: 768px) {
+@media (min-width: 375px) {
   .layout {
     grid-template-rows: 40px auto 80px 40px;
     grid-template-columns: 160px auto auto;
@@ -154,7 +154,7 @@ td {
   border: solid #ffffff 1px;
   background-color: #ffffff;
   padding: 0.1rem;
-  font-size: 0.4rem;
+  font-size: 0.5rem;
   outline: none;
   transition: box-shadow 0.3s, border-color 0.3s;
 }
@@ -185,10 +185,117 @@ td button:hover {
 }
 .widget {
   grid-area: widget;
-}
+    background-color: #29303a;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
 
 .statistics {
   grid-area: statistics;
 }
+
+@media (min-width: 425px) { 
+  th,
+  td {
+    padding: 0.2rem;
+    font-size: 0.7rem;
+  }
+  .sidebar .balance {
+    font-size: 15px;
+  }
+}
+@media (min-width: 600px) and (max-width: 989px) {
+  th,
+  td {
+    padding: 0.4rem;
+    font-size: 1rem;
+  }
+  .sidebar .balance {
+    font-size: 20px;
+  }
+  td button {
+    font-size: 1rem;
+   }
+}
+@media (min-width: 990px){
+  .sidebar .balance{
+    margin: 20px;
+  }
+  main {
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0.5rem;
+    margin: 20px;
+    max-height: 100%;
+    max-width: 95%; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+  }
+  .content-table{
+    max-height: 470px ;
+  }
+  
+  input[type="text"],
+  input[type="radio"],
+  button{
+    font-size: 15px;
+}
+  th,
+  td {
+    flex: 1 1 0%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .sidebar .balance {
+    font-size: 20px;
+  }
+  td button {
+    font-size: 1rem;
+   }
+   .widget{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    max-width: 60%;
+    margin-bottom: 40px;
+    position: absolute;
+    top: 70%;
+    transform: translateX(10%);
+  }
+}
+@media (min-width: 1220px){
+  th,
+td {
+  flex: 1 1 0%;
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  border: solid #ffffff 1px;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  width: 95%;
+}
+/* Botón en la celda de la tabla */
+td button {
+  padding: 3px;
+  background-color: #ff0000d8;
+  color: white;
+  cursor: pointer;
+}
+td button:hover {
+  background-color: #ff0000;
+}
+
+}
+
 
 
